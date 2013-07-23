@@ -23,6 +23,7 @@ if ( count( $teasers ) )
 		{
 ?>
 			<a href="<?php echo $teaser['href'] ?>" title="<?php echo $teaser['more'] ?>"><?php echo $teaser['headline'] ?></a>
+			<div class="mod_recent_href"><?php echo $teaser['href'] ?>
 <?php
 		}
 ?>
