@@ -48,10 +48,11 @@ class toxa_recent extends Frontend
 	}
 
 
-	protected function renderRecentArticles( $intMaxCount = 3, $focusOnColumn = 'main' )
+	protected function renderRecentArticles( $intMaxCount = 3, $focusOnColumn = 'main', $sortingOrder = 'DESC' )
 	{
 		$this->intMaxCount   = intval( $intMaxCount );
 		$this->focusOnColumn = trim( $focusOnColumn );
+		$this->sortingOrder  = trim( $sortingOrder );
 
 		return $this->generate();
 	}
@@ -69,6 +70,7 @@ class toxa_recent extends Frontend
 	{
 		$intMaxCount   = intval( $this->intMaxCount );
 		$focusOnColumn = trim( $this->focusOnColumn );
+		$sortingOrder  = $this->sortingOrder;
 
 
 		// compile complex condition used to select recent articles
@@ -113,7 +115,7 @@ $conditions
 GROUP BY
 	a.id
 ORDER BY
-	sorting DESC
+	sorting $sortingOrder
 EOT
 											);
 
