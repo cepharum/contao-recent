@@ -52,7 +52,7 @@ class toxa_recent extends Frontend
 	{
 		$this->intMaxCount   = intval( $intMaxCount );
 		$this->focusOnColumn = trim( $focusOnColumn );
-		$this->sortingOrder  = trim( $sortingOrder );
+		$this->sortingOrder  = preg_match( '/^(A(SC(ENDING)?)?|inv(erse?)?)$/i', trim( $sortingOrder ) ) ? 'ASC' : 'DESC';
 
 		return $this->generate();
 	}
