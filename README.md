@@ -76,7 +76,7 @@ Beispiele:
 
 {{recent::5}} erweitert diese Grenze auf höchstens 5 Artikel in der Liste.
 
-{{recent::5::left}} listet bis zu 3 Artikel, die den selben Kriterien genügen
+{{recent::5::left}} listet bis zu 5 Artikel, die den selben Kriterien genügen
 wie zuvor. Nur diesmal werden nur Artikel berücksichtigt, die dem linken
 Seitenbereich zugeordnet sind.
 
